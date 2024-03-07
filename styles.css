@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#title{
+    position: absolute;
+    top: 40px;
+}
+#picture-frame{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 500px;
+   
+}
+#back{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 0;
+    left: 10px;
+    cursor: pointer;
+    transition: 0.6s ease;
+   
+    
+}
+#next{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 0;
+    left:850px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+#slide-container{
+   
+    width: 890px;
+    height: 490px;
+    border: 2px solid black;
+}
+
+.nav-dots{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 5px; /* Add some margin for spacing */
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.6s ease; 
+    
+}
+
+#next:hover, #back:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+.nav-dots:hover{
+    background-color: #717171;
+}
+.nav-dots.active {
+    background-color: #717171;
+  }
+
+#navigation-dots-container{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+#slide-container img.slides {
+    display: none;
+    animation-name: slides;
+    animation-duration: 1.5s;
+    width: 890px;
+    height: 490px;
+    
+  }
+  
+  @keyframes slides {
+    from {opacity: 0.4}
+    to {opacity: 1}
+  }
+  
